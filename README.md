@@ -57,15 +57,14 @@ FlagDescription--dataDirectory containing the two Raman map Excel files (map2A a
 
 ## Repo Outputs
 
-The script writes:
+The script produces:
 
-
-Spatial maps of I_G, I_2D/I_G, I_D/I_G, I_2D, cluster labels, and train/val/test partition.
-Per-pixel feature matrix (37 columns: amplitude, position, FWHM, area, SNR per band, plus derived ratios).
-Training and validation loss/accuracy curves.
-Confusion matrix and per-class classification report.
-Grad-CAM saliency overlays per cluster.
-Trained model checkpoint.
+1) Spatial maps of I_G, I_2D/I_G, I_D/I_G, I_2D, cluster labels, and train/val/test partition.
+2) Per-pixel feature matrix (37 columns: amplitude, position, FWHM, area, SNR per band, plus derived ratios).
+3) Training and validation loss/accuracy curves.
+4) Confusion matrix and per-class classification report.
+5) Grad-CAM saliency overlays per cluster.
+6) Trained model checkpoint.
 
 
 ## Pipeline architecture
