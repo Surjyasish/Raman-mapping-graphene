@@ -31,7 +31,7 @@ Class| Domain | n | Precision | Recall |F1| \
 1 | Defective FLG | 49 | 0.980 | 1.000 | 0.990\
 2 | Transition zone | 77 | 1.000 | 0.883 |0.938\
 3 | Near-monolayer hotspots | 19 | 0.704 | 1.000 |0.826\
-  | Weighted avg | 189 | 0.965 |0.952 | 0.955\
+  | Weighted avg | 189 | 0.965 |0.952 | 0.955
 
 The pristine graphite domain is perfectly separated. All 19 near-monolayer pixels are recovered (recall = 1.000); the lower precision reflects 8 transition-zone pixels misclassified at the physically continuous boundary between defective FLG and monolayer regions — an expected ambiguity at the scale of the laser spot.
 
