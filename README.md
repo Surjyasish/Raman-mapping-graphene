@@ -26,12 +26,12 @@ This implementation uses contiguous y-band splitting so the test set is a genuin
 
 On the spatially-separated test set (n = 189 pixels, bottom 20 % of the y-range):
 
-Class| Domain | n | Precision | Recall |F1| 
-0 | Pristine graphite interior | 44 | 1.000 | 1.000 | 1.000 |
-1 | Defective FLG | 49 | 0.980 | 1.000 | 0.990
-2 | Transition zone | 77 | 1.000 | 0.883 |0.938
-3 | Near-monolayer hotspots | 19 | 0.704 | 1.000 |0.826
-  | Weighted avg | 189 | 0.965 |0.952 | 0.955
+Class| Domain | n | Precision | Recall |F1| \
+0 | Pristine graphite interior | 44 | 1.000 | 1.000 | 1.000 \
+1 | Defective FLG | 49 | 0.980 | 1.000 | 0.990\
+2 | Transition zone | 77 | 1.000 | 0.883 |0.938\
+3 | Near-monolayer hotspots | 19 | 0.704 | 1.000 |0.826\
+  | Weighted avg | 189 | 0.965 |0.952 | 0.955\
 
 The pristine graphite domain is perfectly separated. All 19 near-monolayer pixels are recovered (recall = 1.000); the lower precision reflects 8 transition-zone pixels misclassified at the physically continuous boundary between defective FLG and monolayer regions — an expected ambiguity at the scale of the laser spot.
 
@@ -91,14 +91,14 @@ GradCAM1D ──▶ save_gradcam_figure
 
 ## Module reference
 
-*Preprocessing.* load_and_stitch, als_baseline, preprocess_spectra.\
-*Peak fitting.* lorentzian, fit_peak, extract_features.\
-*Unsupervised analysis.* run_pca, cluster_pixels.\
-*Splitting and loaders.* spatial_split, build_loaders, RamanDataset.
-Model. RamanCNN1D — Conv1D(1→32, k=15) → Conv1D(32→64, k=9) → Conv1D(64→128, k=7) → Conv1D(128→256, k=5) → GAP → FC(128) → Dropout(0.4) → FC(4).
-Training. train_model, evaluate — Adam (lr = 10⁻³, wd = 10⁻⁴), cosine annealing over 30 epochs, gradient clipping (max norm 1.0), early stopping (patience 8).
-Interpretability. GradCAM1D, save_gradcam_figure.
-Visualisation. make_grid_map, save_spatial_maps, save_training_curves.
+**Preprocessing.** load_and_stitch, als_baseline, preprocess_spectra.\
+**Peak fitting.** lorentzian, fit_peak, extract_features.\
+**Unsupervised analysis.** run_pca, cluster_pixels.\
+**Splitting and loaders.** spatial_split, build_loaders, RamanDataset.\
+**Model.** RamanCNN1D — Conv1D (1→32, k=15) → Conv1D (32→64, k=9) → Conv1D (64→128, k=7) → Conv1D (128→256, k=5) → GAP → FC (128) → Dropout (0.4) → FC (4).\
+**Training.** train_model, evaluate — Adam (lr = 10⁻³, wd = 10⁻⁴), cosine annealing over 30 epochs, gradient clipping (max norm 1.0), early stopping (patience 8).\
+**Interpretability.** GradCAM1D, save_gradcam_figure.\
+**Visualisation.** make_grid_map, save_spatial_maps, save_training_curves.
 
 ## Dataset
 
