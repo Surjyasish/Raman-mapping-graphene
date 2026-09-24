@@ -91,10 +91,10 @@ GradCAM1D ──▶ save_gradcam_figure
 
 ## Module reference
 
-Preprocessing. load_and_stitch, als_baseline, preprocess_spectra.
-Peak fitting. lorentzian, fit_peak, extract_features.
-Unsupervised analysis. run_pca, cluster_pixels.
-Splitting and loaders. spatial_split, build_loaders, RamanDataset.
+*Preprocessing.* load_and_stitch, als_baseline, preprocess_spectra.\
+*Peak fitting.* lorentzian, fit_peak, extract_features.\
+*Unsupervised analysis.* run_pca, cluster_pixels.\
+*Splitting and loaders.* spatial_split, build_loaders, RamanDataset.
 Model. RamanCNN1D — Conv1D(1→32, k=15) → Conv1D(32→64, k=9) → Conv1D(64→128, k=7) → Conv1D(128→256, k=5) → GAP → FC(128) → Dropout(0.4) → FC(4).
 Training. train_model, evaluate — Adam (lr = 10⁻³, wd = 10⁻⁴), cosine annealing over 30 epochs, gradient clipping (max norm 1.0), early stopping (patience 8).
 Interpretability. GradCAM1D, save_gradcam_figure.
@@ -115,11 +115,11 @@ The 1D-CNN, training loop, and Grad-CAM module require no changes.
 
 ## References
 
-Ferrari et al., Phys. Rev. Lett. 97, 187401 (2006).
-Ferrari & Basko, Nat. Nanotechnol. 8, 235 (2013).
-Malard et al., Phys. Rep. 473, 51 (2009).
-Cançado et al., Nano Lett. 11, 3190 (2011).
-Eilers & Boelens, Baseline correction with asymmetric least squares smoothing (2005).
-Selvaraju et al., Grad-CAM, ICCV (2017).
+- Ferrari et al., Phys. Rev. Lett. 97, 187401 (2006).
+- Ferrari & Basko, Nat. Nanotechnol. 8, 235 (2013).
+- Malard et al., Phys. Rep. 473, 51 (2009).
+- Cançado et al., Nano Lett. 11, 3190 (2011).
+- Eilers & Boelens, Baseline correction with asymmetric least squares smoothing (2005).
+- Selvaraju et al., Grad-CAM, ICCV (2017).
 
 
