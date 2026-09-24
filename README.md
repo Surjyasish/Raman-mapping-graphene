@@ -1,11 +1,11 @@
 # Raman-mapping-graphene
-Overview
+## Overview
 
 This repository implements a complete, reproducible machine-learning pipeline for spatially-resolved Raman spectroscopy of graphene and graphite. The pipeline takes raw dual-window Raman map data (two overlapping spectral windows acquired on a confocal Raman microscope), produces baseline-corrected and normalised spectra, fits the D, G, D′, 2D, and D+G bands, clusters pixels into physically distinct domains, and trains a 1D convolutional neural network to classify domains with Grad-CAM saliency for interpretability.
 
 The pipeline is designed around a single principle: spatially correlated hyperspectral data requires spatially-aware validation. Random pixel splitting leaks neighbour information across the train/test boundary and inflates accuracy. This implementation uses contiguous y-band splitting so the test set is a genuinely unseen spatial region.
 
-Key features
+## Key features
 
 
 Spectral stitching of two acquisition windows (1012–2128 cm⁻¹ and 2047–3002 cm⁻¹) into a unified 1799-point spectrum per pixel over 1200–3000 cm⁻¹.
